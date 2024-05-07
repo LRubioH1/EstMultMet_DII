@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Carga los datos desde el archivo Excel (reemplaza con tu ruta y nombre de archivo)
+# Carga los datos desde el archivo Excel
 df = pd.read_excel('Las_500_de_Expansion_2022.xlsx', sheet_name='Base')
 
 # Define las columnas de interés
@@ -24,7 +24,7 @@ estadisticas_por_sector = grupo_sector.agg({
 pd.set_option('display.max_columns', None)
 
 
-# Muestra la tabla con las estadísticas descriptivas
+# Tabla con las estadísticas descriptivas
 print(estadisticas_por_sector)
 
 estadisticas_por_sector.fillna(0, inplace=True)
